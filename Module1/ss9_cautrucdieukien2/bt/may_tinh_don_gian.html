@@ -1,68 +1,72 @@
-<!DOCTYPE html>
+
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<table>
     <h1>caculator</h1>
-    <tr>
-        <td><input type="text" id="input"></td>
-    </tr>
-</table>
-<table>
-    <tr>
-        <td><input onclick="tinh('add')" type="button" value="1"></td>
-        <td><input onclick="tinh('sub')" type="button" value="2"></td>
-        <td><input onclick="tinh('mul')" type="button" value="3"></td>
-        <td><input onclick="tinh('div')" type="button" value="+"></td>
-    </tr>
+</head>
+<div style="border: 3px  solid;width: 113px;">
+    <table>
+        <tr>
+            <td ><input style="width: 100px;" type="text" id="input"></td>
 
-    <tr>
-        <td><input onclick="tinh('add')" type="button" value="4"></td>
-        <td><input onclick="tinh('sub')" type="button" value="5"></td>
-        <td><input onclick="tinh('mul')" type="button" value="6"></td>
-        <td><input onclick="tinh('div')" type="button" value="-"></td>
-    </tr>
+        </tr>
+    </table>
+    <table >
+        <tr>
+            <td><input type="button" name="one" value="1" onclick="calculator.display.value += 1"></td>
+            <td><input type="button" name="two" value="2" onclick="calculator.display.value += 2"></td>
+            <td><input type="button" name="three" value="3" onclick="calculator.display.value += 3"></td>
+            <td><input onclick="tinh('add')" type="button" value="+"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="four" value="4" onclick="calculator.display.value += 4"></td>
+            <td><input type="button" name="five" value="5" onclick="calculator.display.value += 5"></td>
+            <td><input type="button" name="six" value="6" onclick="calculator.display.value += 6"></td>
+            <td><input onclick="tinh('sub')" type="button" value="-"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="seven" value="7" onclick="calculator.display.value += 7"></td>
+            <td><input type="button" name="eight" value="8" onclick="calculator.display.value += 8"></td>
+            <td><input type="button" name="nine" value="9" onclick="calculator.display.value += 9"></td>
+            <td><input onclick="tinh('mul')" type="button" value="*"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="operator" id="clear" name="clear" value="C" onclick="calculator.display.value = ''"></td>
+            <td><input type="button" class="operator" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+            <td><input type="button" class="operator" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+            <td><input onclick="tinh('div')" type="button" value="/"></td>
+        </tr>
 
-    <tr>
-        <td><input onclick="tinh('add')" type="button" value="7"></td>
-        <td><input onclick="tinh('sub')" type="button" value="8"></td>
-        <td><input onclick="tinh('mul')" type="button" value="9"></td>
-        <td><input onclick="tinh('div')" type="button" value="*"></td>
-    </tr>
 
-    <tr>
-        <td><input onclick="tinh('add')" type="button" value="C"></td>
-        <td><input onclick="tinh('sub')" type="button" value="0"></td>
-        <td><input onclick="tinh('mul')" type="button" value="="></td>
-        <td><input onclick="tinh('div')" type="button" value="/"></td>
-    </tr>
 
-    <tr>
-        <td style="color: blue" colspan="4" id="ketqua"></td>
-    </tr>
-</table>
-<!--<script>-->
-<!--    function tinh(sting) {-->
-<!--        let caculator1 = document.getElementById("input").value ;-->
-<!--        let caculator2 = document.getElementById("input1").value ;-->
-<!--        let cclt1 = parseInt(caculator1);-->
-<!--        let cclt2 = parseInt(caculator2);-->
-<!--        if (sting == 'add') {-->
-<!--            let tong = (cclt1 + cclt2);-->
-<!--            document.getElementById("ketqua").innerHTML = "kết quả =" + tong;-->
-<!--        } else if (sting == "sub"){-->
-<!--            let hieu = (cclt1 - cclt2);-->
-<!--            document.getElementById("ketqua").innerHTML = "kết quả =" + hieu;-->
-<!--        } else if (sting == "mul"){-->
-<!--            let nhan = (cclt1 * cclt2);-->
-<!--            document.getElementById("ketqua").innerHTML = "kết quả =" + nhan;-->
-<!--        } else if (sting == "div") {-->
-<!--            let chia = (cclt1 / cclt2);-->
-<!--            document.getElementById("ketqua").innerHTML = "kết quả =" + chia;-->
-<!--        }-->
-<!--    }-->
-<!--</script>-->
+
+        <tr>
+            <td style="color: blue" colspan="4" id="ketqua"></td>
+        </tr>
+    </table>
+</div>
+<script>
+    function tinh(sting) {
+        let caculator1 = document.getElementById("input").value ;
+        let caculator2 = document.getElementById("input1").value ;
+        let cclt1 = parseInt(caculator1);
+        let cclt2 = parseInt(caculator2);
+        if (sting == 'add') {
+            let tong = (cclt1 + cclt2);
+            document.getElementById("ketqua").innerHTML = "kết quả =" + tong;
+        } else if (sting == "sub"){
+            let hieu = (cclt1 - cclt2);
+            document.getElementById("ketqua").innerHTML = "kết quả =" + hieu;
+        } else if (sting == "mul"){
+            let nhan = (cclt1 * cclt2);
+            document.getElementById("ketqua").innerHTML = "kết quả =" + nhan;
+        } else if (sting == "div") {
+            let chia = (cclt1 / cclt2);
+            document.getElementById("ketqua").innerHTML = "kết quả =" + chia;
+        }
+    }
+</script>
 </body>
 </html>
