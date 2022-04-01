@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Cuocphidt = 25000
+    let sotien = "";
+    let sophutsudung = parseInt(prompt('nhập số phút đã sử dụng'));
+    if (sophutsudung > 200) {
+        sotien = (sophutsudung - 200) * 200 + 150 * 400 + 50 * 600;
+    } else if (sophutsudung > 50) {
+        sotien = (sophutsudung - 50) * 400 + 50 * 600;
+    } else {
+        sotien = sophutsudung * 600;
+    }
+    let tongPhi = sotien + Cuocphidt;
+    alert("Bạn đã gọi hết " + sophutsudung +' phút và ' + 'số tiền bạn phải nộp là: ' + tongPhi + ' nghìn đồng');
+</script>
+</body>
+</html>
