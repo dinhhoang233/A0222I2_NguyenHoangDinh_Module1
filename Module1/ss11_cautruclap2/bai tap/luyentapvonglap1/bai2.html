@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i = parseInt(prompt('nhập nhiệt độ vào đây'));
+    do {
+        if (i > 100) {
+            alert('nhập lại nhiệt độ nhỏ hơn' + i);
+            i = parseInt(prompt('nhập nhiệt độ vào đây'));
+        } else if (i < 20) {
+            alert('nhập lại nhiệt độ lớn hơn' + i);
+            i = parseInt(prompt('nhập nhiệt độ vào đây'));
+        } else {
+            alert('bạn đã nhập nhiệt độ');
+        }
+    }
+    while (i<20 || i>100);
+</script>
+</body>
+</html>

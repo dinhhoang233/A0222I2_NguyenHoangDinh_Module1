@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style></style>
+<body>
+<script language="JavaScript">
+
+        let sout, i, j;
+        sout = "<table border='1' width='900' cellspacing='0' cellpadding='3'>";
+        i = j = 1;
+        while (i <= 10) {
+            sout = sout + "<tr>";
+            while (j <= 10) {
+                sout = sout + "<td>"+ j + "x" + i + "="+ i * j + "</td>";
+                j++;
+            }
+            sout = sout + "</tr>";
+            j = 1;
+            i++;
+        }
+        sout = sout + "</table>";
+        document.write(sout);
+
+    // function bangcuuchuong()
+    // {
+    //     document.write("<table border=1 width=100%>")
+    //     for(i=1;i<=9;i++)
+    //     {
+    //         document.write("<tr>")
+    //         for(n=2;n<=9;n++)
+    //             document.write("<td>" +n + "x" + i +"="+ (n*i));
+    //         document.write("</td>");
+    //         document.write("</tr>")
+    //     }
+    //     document.write("</tr></table>")
+    // }
+</script>
+</body>
+</html>

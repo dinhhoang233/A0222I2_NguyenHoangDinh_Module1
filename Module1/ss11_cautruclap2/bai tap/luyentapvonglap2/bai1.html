@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("input số fibonacci"));
+    let F = 0 , F1 = 0 , F2 = 0;
+    let finonacci = "";
+    for (let i = 0 ; i < n ; i++){
+        if (i===0){
+            F = 1
+            F1 = 1
+            finonacci += F + ""
+        }else {
+            F = F1 + F2
+            F1 = F2
+            F2 = F
+            finonacci += F + ""
+            console.log(i + "=" + F)
+        }
+    }
+    document.write('dãy fibonacci là:' + finonacci)
+</script>
+</body>
+</html>
