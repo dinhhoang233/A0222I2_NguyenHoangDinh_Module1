@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+ let V = parseInt(prompt('nhập vào đây một số từ 0 - 9'));
+ let array = [1 , 2 , 3 , 6, 9 , 7 , 4 , 8 , 5 , 0];
+ let flag = false ; // mặc định không tìm thấy
+ for (let i = 0 ; i < array.length ; i++) {
+     if (array[i] === V) {
+         document.write(V + " is in the array");
+         flag = true;
+         break;
+     }
+ }
+ if (!flag) {
+         document.write(V + " is not in the array");
+ }
+
+</script>
 </body>
 </html>

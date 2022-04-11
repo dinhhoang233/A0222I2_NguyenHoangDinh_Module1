@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let arr = [4 , 6 , 12 , 84 , 64 ,22];
+    let tong = 0;
+    let max = arr[0];
+    for (let i = 0 ; i < arr.length ; i++){
+        tong += arr[i]
+        if (arr[i] > max){
+            max = arr[i];
+        }
+    }document.write("giá trị lớn nhất là: " + max + "<br>");
+    document.write("giá trị trung bình của hàm là: " + tong/arr.length)
+</script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputV = parseInt(prompt("nhập vào đây 1 số từ 0-9"));
+    let array = [1 , 2 , 3 , 6, 9 , 7 , 4 , 8 , 5 , 0];
+
+    let flg = false;//mặc định k tìm thấy
+    for (let i = 0 ; i < array.length ; i++){
+        if (inputV === array[i]){
+            document.write("V is in the array");
+            flg = true;
+            break;
+        }
+    }
+    if (flg) {
+        let newArr = array.filter(function (a) {
+            if (a === inputV) {
+                return false;
+            }
+            return true;
+        });
+        newArr.push('0');
+        document.write(newArr)
+    } else {
+        document.write('V is NOT in the array');
+    }
+</script>
+</body>
+</html>

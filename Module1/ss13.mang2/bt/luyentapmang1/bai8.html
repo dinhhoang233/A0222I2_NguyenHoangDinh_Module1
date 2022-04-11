@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let myArr = [];
+    for (let i = 0; i < 10; i++) {
+        myArr[i] = parseInt(prompt('Input array: '));
+    }
+    document.write('Array is : ' + myArr + '<br>');
+    for (let i = 0; i < myArr.length; i++) {
+        myArr.sort(function (a, b) {
+            result = b - a
+            return result;
+        })
+    }
+    document.write('Sắp xếp giảm dần là : ' + myArr)
+</script>
 </body>
 </html>

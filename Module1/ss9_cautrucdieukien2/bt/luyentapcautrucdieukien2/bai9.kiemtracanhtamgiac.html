@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a = parseInt(prompt('nhập vào cạnh a'));
+    let b = parseInt(prompt('nhập vào cạnh b'));
+    let c = parseInt(prompt('nhập vào cạnh c'));
+    if (a > 0 && b > 0 && c > 0) {
+        if( a + b > c && b + c > a && a + c > b){
+            alert("chính xác là cạnh của tam giác");
+        }else {
+            alert('không phải là cạnh của một tam giác');
+        }
+    }
+</script>
 </body>
 </html>

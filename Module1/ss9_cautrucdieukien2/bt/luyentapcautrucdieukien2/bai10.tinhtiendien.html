@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let sodien = parseInt(prompt("Nhâp số điện (kWh) : "));
+    const b1 = 1678;
+    const b2 = 1734;
+    const b3 = 2014;
+    const b4 = 2536;
+    const b5 = 2834;
+    const b6 = 2927;
+    if(sodien < 0) {
+        alert("Mời nhập lại số điện không đươc nhỏ hơn 0");
+    } else if(sodien <= 50) {
+        let soTienDien = sodien*b1;
+        alert("Dùng điện trong khoảng 0 - 50 kWh số tiền phải trả là : " + soTienDien);
+    } else if(sodien <= 100) {
+        let soTienDien = 50*b1 + ((sodien-50)*b2);
+        alert("Dùng điện trong khoảng 51 - 100 kWh số tiền phải trả là : " + soTienDien);
+    } else if(sodien <= 200) {
+        let soTienDien = 50*b1 + (50*b2) + ((sodien-100)*b3);
+        alert("Dùng điện trong khoảng 101 - 200 kWh số tiền phải trả là : " + soTienDien);
+    } else if(sodien <= 300) {
+        let soTienDien = 50*b1 + (50*b2) + (100*b3) + ((sodien-200)*b4);
+        alert("Dùng điện trong khoảng 201 - 300 kWh số tiền phải trả là : " + soTienDien);
+    } else if(sodien <= 400) {
+        let soTienDien = 50*b1 + (50*b2) + (100*b3) + (100*b4) + ((sodien-300)*b5);
+        alert("Dùng điện trong khoảng 301 - 400 kWh số tiền phải trả là : " + soTienDien);
+    } else if(sodien > 400) {
+        let soTienDien = 50*b1 + (50*b2) + (100*b3) + (100*b4) + (100*b5) + ((sodien-400)*b6);
+        alert("Dùng điện trên 400 kWh số tiền phải trả là : " + soTienDien);
+    }
+</script>
 </body>
 </html>

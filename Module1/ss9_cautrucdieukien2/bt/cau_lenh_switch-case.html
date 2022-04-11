@@ -8,26 +8,31 @@
 <table>
 
     <tr>
-        <td><input type="text" id="input"></td>
+        <td><input type="text" id="inputday"></td>
         <td><input onclick="tinh('ngay')" type="button" value="Tính số ngày"></td>
     </tr>
     <tr>
-        <td style="size: A3" id="tháng 'input' có 'ketqua' "></td>
+        <td>kết quả: <span id="input"></span></td>
     </tr>
 </table>
 
 <script>
-    // function tinh(sting) {
-        /*Hàm tính số ngày trong tháng javascript*/
-
-    // const get_day_of_month = (year, month) => {
-    //     return new Date(year, month, 0).getDate();
-    // };
-    //
-    // let thang2 = get_day_of_month(2022, 2); //28
-    // let thang3 = get_day_of_month(2022, 3); //31
-
-    // }
+    function tinh() {
+    let ngay = parseInt(
+        document.getElementById('inputday').value
+    )
+        switch (ngay) {
+        //tháng có 31 ngày
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+            document.getElementById(input).innerHTML = "tháng" + "ngay" + "có 31 ngày"
+        }
+    }
 </script>
 </body>
 </html>
