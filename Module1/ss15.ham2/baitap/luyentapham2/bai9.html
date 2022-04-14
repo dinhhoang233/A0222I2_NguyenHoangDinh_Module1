@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkArray(soKT, mang) {
+        let dem = 0;
+        for (let i = 0; i < mang.length; i++) {
+            if (soKT === mang[i]) {
+                dem++;
+            }
+        }
+        if (dem > 0) {
+            return dem;
+        } else {
+            return -1
+        }
+    }
+
+    let arr = ['d', 'i', 'n', 'h', 'h', 'o', 'a', 'n' , 'g'];
+    let kt = prompt('Nhập kí tự bất kỳ');
+    document.write('Mảng là: ' + arr + '<br>');
+    if (checkArray(kt, arr) > 0) {
+        document.write('Có kí tự ' + kt + ' trong mảng');
+    } else {
+        document.write('Không có gì trong mảng')
+    }
+</script>
+</body>
+</html>

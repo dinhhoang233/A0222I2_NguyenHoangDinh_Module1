@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function feetToMetters(feet) {
+        let meters = 0.305 * feet;
+        return meters;
+    }
+    function metersToFeet(meters) {
+        let feet = 3.279 * meters;
+        return feet;
+    }
+    let a = parseInt(prompt('nhập giá trị Feet cần đổi sang Meters: '));
+    let checkA = feetToMetters(a);
+    alert(checkA);
+
+    let b = parseInt(prompt('Nhập vào giá trị Meters cần đổi sang Feet: '));
+    let checkB = metersToFeet(b);
+    alert(checkB);
+</script>
+</body>
+</html>
